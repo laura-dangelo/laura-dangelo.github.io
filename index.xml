@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>Laura D&#39;Angelo</title>
     <link>https://laura-dangelo.github.io/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <description>Recent content on Laura D&#39;Angelo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     
 	<atom:link href="https://laura-dangelo.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About</title>
+      <link>https://laura-dangelo.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laura-dangelo.github.io/about/</guid>
+      <description>I am a third-year PhD student in Statistics at University of Padova (Cycle XXXIV), my supervisor is Prof. Antonio Canale. My research interests mainly concern Bayesian modeling of complex data, Bayesian Nonparametrics and Computational Statistics. Education  PhD in Statistical Sciences (ongoing), University of Padova M.S. in Statistical Sciences B.S. in Statistics, Economics and Finance  </description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://laura-dangelo.github.io/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laura-dangelo.github.io/contact/</guid>
+      <description>Department of Statistical Sciences
+University of Padova
+Via Cesare Battisti 241 35121 Padova, Italy Email laura.dangelo.1@phd.unipd.it
+dangelo@stat.unipd.it</description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>https://laura-dangelo.github.io/publications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laura-dangelo.github.io/publications/</guid>
+      <description>D’Angelo L., Canale A., Yu Z. and Guindani M. (2021) Bayesian nonparametric analysis for the detection of spikes in noisy calcium imaging data. arXiv preprint arXiv:2102.09403 D’Angelo L. and Canale A. (2021) Discussion on: “Centered Partition Processes: Informative Priors for Clustering”, in Bayesian Analysis, 16(1)D’Angelo L., Canale A., Yu Z. and Guindani M. (2021) Detection of neural activity in calcium imaging data via Bayesian mixture models, in Book of Short Papers SIS 2021 (Editors: Perna C.</description>
+    </item>
+    
+    <item>
+      <title>Resume</title>
+      <link>https://laura-dangelo.github.io/resume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laura-dangelo.github.io/resume/</guid>
+      <description>Current position Since October 2018; (expected completion: December 2021) PhD student in Statistical Science, University of Padova Supervisor: Prof. Antonio Canale Co-supervisor: Prof. Michele Guindani. Education Master’s Degree in Statistics (10/2015 – 11/2017), University of Padova Title of dissertation: Modelli Bayesiani nonparametrici: applicazioni al settore assicurativo (Bayesian nonparametric models: applications in insurance)Supervisor: Prof. Antonio CanaleFinal mark: 110/110 cum laude.Bachelor’s Degree in Statistics, Economics and Finance (10/2012 – 09/2015), University of PadovaTitle of dissertation: L’area sotto la curva ROC specifica per caratteristiche (Covariate-specific area under the ROC curve)Supervisor: Prof.</description>
+    </item>
     
   </channel>
 </rss>
