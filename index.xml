@@ -16,7 +16,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laura-dangelo.github.io/about/</guid>
-      <description>I am a postdoctoral researcher in Statistics at University of Milano-Bicocca.My research interests mainly concern Bayesian modeling of complex data, Bayesian nonparametrics and computational statistics. Education  PhD in Statistical Sciences; University of Padova (expected completion April 2022) M.S. in Statistical Sciences; University of Padova B.S. in Statistics, Economics and Finance; University of Padova  </description>
+      <description>I am a postdoctoral researcher in Statistics at the Department of Economics, Management and Statistics (DEMS) at University of Milano-Bicocca (Milan, Italy), working under the supervision of Prof. Bernardo Nipoti (DEMS, University of Milano-Bicocca). I have received my PhD degree in Statistics at Universiy of Padova (Padova, Italy) in 2022 under the supervision of Prof. Antonio Canale (Department of Statistical Sciences, University of Padova) and Prof. Michele Guindani (Department of Statistics, UCI).</description>
     </item>
     
     <item>
@@ -25,7 +25,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laura-dangelo.github.io/contact/</guid>
-      <description>Department of Economics, Management and Statistics (DEMS) University of Milano-Bicocca Piazza dell’Ateneo Nuovo 1, 20126 Milan Email laura.dangelo@unimib.it laura.</description>
+      <description>Department of Economics, Management and Statistics (DEMS) University of Milano-Bicocca Piazza dell’Ateneo Nuovo 1, 20126 Milan Email laura.dangelo@unimib.it </description>
     </item>
     
     <item>
@@ -34,7 +34,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laura-dangelo.github.io/publications/</guid>
-      <description>D’Angelo L. and Canale A. (2021) Efficient posterior sampling for Bayesian Poisson regression. arXiv preprint arXiv:2109.09520 D’Angelo L., Canale A., Yu Z. and Guindani M. (2021) Bayesian nonparametric analysis for the detection of spikes in noisy calcium imaging data. arXiv preprint arXiv:2102.09403 D’Angelo L. and Canale A. (2021) Contributed Discussion on: “Centered Partition Processes: Informative Priors for Clustering”, in Bayesian Analysis, 16(1)D’Angelo L., Canale A., Yu Z. and Guindani M. (2021) Detection of neural activity in calcium imaging data via Bayesian mixture models, in Book of Short Papers SIS 2021 (Editors: Perna C.</description>
+      <description>D’Angelo L., Canale A., Yu Z. and Guindani M. (2022) Bayesian nonparametric analysis for the detection of spikes in noisy calcium imaging data. Biometrics doi.org/10.1111/biom.13626 D’Angelo L. and Canale A. (2021) Efficient posterior sampling for Bayesian Poisson regression. arXiv preprint arXiv:2109.09520 D’Angelo L. and Canale A. (2021) Contributed Discussion on: “Centered Partition Processes: Informative Priors for Clustering”, in Bayesian Analysis, 16(1)D’Angelo L., Canale A., Yu Z. and Guindani M. (2021) Detection of neural activity in calcium imaging data via Bayesian mixture models, in Book of Short Papers SIS 2021 (Editors: Perna C.</description>
     </item>
     
     <item>
@@ -43,8 +43,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laura-dangelo.github.io/resume/</guid>
-      <description>Current position Postdoctoral scholar at University of Milano-Bicocca.
-Education PhD student in Statistical Science (10/2018 – 11/2021, final exam expected on 04/2022), University of Padova Thesis title: Bayesian modeling of calcium imaging data Supervisor: Prof. Antonio Canale Co-supervisor: Prof. Michele Guindani. Master’s Degree in Statistics (10/2015 – 11/2017), University of Padova Thesis title: Modelli Bayesiani nonparametrici: applicazioni al settore assicurativo (Bayesian nonparametric models: applications in insurance)Supervisor: Prof. Antonio CanaleFinal mark: 110/110 cum laude.</description>
+      <description>Current position Postdoctoral researcher at the Department of Economics, Management and Statistics (DEMS), University of Milano-Bicocca. Education PhD student in Statistical Science (10/2018 – 11/2021), University of Padova Thesis title: Bayesian modeling of calcium imaging data Supervisor: Prof. Antonio Canale Co-supervisor: Prof. Michele Guindani. Master’s Degree in Statistics (10/2015 – 11/2017), University of Padova Thesis title: Modelli Bayesiani nonparametrici: applicazioni al settore assicurativo (Bayesian nonparametric models: applications in insurance)Supervisor: Prof. Antonio CanaleFinal mark: 110/110 cum laude.</description>
     </item>
     
   </channel>
