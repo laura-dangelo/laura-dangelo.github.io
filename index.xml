@@ -25,10 +25,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laura-dangelo.github.io/talks/</guid>
-      <description>Poster presentation: “Clustering activation patterns of spatially-referenced neurons”; ISBA 2022, Montreal, Canada; June 27 – July 1, 2022.
-  Invited talk: “Bayesian nonparametric clustering of spatially-referenced spike train data”; SIS 2022, Caserta, Italy; June 22 – 24, 2022.
-  Discussant at the solicited session “Bayesian inference for complex random structures”; SIS 2022, Caserta, Italy; June 22 – 24, 2022.
-  Contributed talk: “Bayesian nonparametric analysis for the detection of spikes in noisy calcium imaging data”; JSM 2021; August 8 – 12, 2021.</description>
+      <description>Invited talk: &amp;ldquo;Bayesian nonparametric clustering of spatially-referenced spike train data&amp;rdquo;; SIS 2022, Caserta, Italy; June 22 – 24, 2022.
+  Discussant at the solicited session &amp;ldquo;Bayesian inference for complex random structures&amp;rdquo;; SIS 2022, Caserta, Italy; June 22 – 24, 2022.
+  Contributed talk: &amp;ldquo;Bayesian nonparametric analysis for the detection of spikes in noisy calcium imaging data&amp;rdquo;; JSM 2021; August 8 – 12, 2021.
+  Contributed talk: &amp;ldquo;Bayesian nonparametric analysis for the detection of spikes in noisy calcium imaging data&amp;rdquo;; ISBA 2021, June 23 – July 2; 2021.</description>
     </item>
     
     <item>
@@ -46,7 +46,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laura-dangelo.github.io/publications/</guid>
-      <description>D&amp;rsquo;Angelo (2022) Bayesian modeling of calcium imaging data (PhD Thesis).Supervisor: Prof. Antonio Canale; Co-supervisor: Prof. Michele Guindani. Research Padua Archive, Full text D’Angelo L., Canale A., Yu Z. and Guindani M. (2022) Bayesian nonparametric analysis for the detection of spikes in noisy calcium imaging data. Biometrics doi.org/10.1111/biom.13626 D’Angelo L. and Canale A. (2021) Efficient posterior sampling for Bayesian Poisson regression. arXiv preprint arXiv:2109.09520 D’Angelo L. and Canale A. (2021) Contributed Discussion on: “Centered Partition Processes: Informative Priors for Clustering”, in Bayesian Analysis, 16(1)D’Angelo L.</description>
+      <description>D’Angelo L. (2022) Bayesian nonparametric clustering of spatially-referenced spike train data, in Book of Short Papers SIS 2022.
+  Denti F., D’Angelo L. and Guindani M. (2022) Bayesian approaches for capturing the	heterogeneity of neuroimaging experiments, in Book of Short Papers SIS 2022.
+  D&amp;rsquo;Angelo L. (2022) Bayesian modeling of calcium imaging data (PhD Thesis).Supervisor: Prof. Antonio Canale; Co-supervisor: Prof. Michele Guindani. Research Padua Archive, Full text</description>
     </item>
     
     <item>
