@@ -16,7 +16,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laura-dangelo.github.io/about/</guid>
-      <description>I am a postdoctoral researcher in Statistics at the Department of Economics, Management and Statistics (DEMS) at University of Milano-Bicocca (Milan, Italy), working under the supervision of Prof. Bernardo Nipoti (DEMS, University of Milano-Bicocca). I have received my PhD degree in Statistics at Universiy of Padova (Padova, Italy) in 2022 under the supervision of Prof. Antonio Canale (Department of Statistical Sciences, University of Padova) and Prof. Michele Guindani (Department of Statistics, UCI).</description>
+      <description>I am a postdoctoral researcher in Statistics at the Department of Economics, Management and Statistics (DEMS) at University of Milano-Bicocca (Milan, Italy), working under the supervision of Prof. Bernardo Nipoti (DEMS, University of Milano-Bicocca). I have received my PhD degree in Statistics at Universiy of Padova (Padova, Italy) in 2022 under the supervision of Prof. Antonio Canale (Department of Statistical Sciences, University of Padova) and Prof. Michele Guindani (Department of Biostatistics, UCLA).</description>
     </item>
     
     <item>
@@ -46,8 +46,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laura-dangelo.github.io/publications/</guid>
-      <description>D’Angelo L. (2022) Bayesian nonparametric clustering of spatially-referenced spike train data, in Book of Short Papers SIS 2022.
-  Denti F., D’Angelo L. and Guindani M. (2022) Bayesian approaches for capturing the	heterogeneity of neuroimaging experiments, in Book of Short Papers SIS 2022.
+      <description>D’Angelo L. and Canale A. (2022) Efficient posterior sampling for Bayesian Poisson regression. arXiv preprint arXiv:2109.09520
+  D’Angelo L., Canale A., Yu Z. and Guindani M. (2022) Bayesian nonparametric analysis for the detection of spikes in noisy calcium imaging data. Biometrics doi.org/10.1111/biom.13626
   D&amp;rsquo;Angelo L. (2022) Bayesian modeling of calcium imaging data (PhD Thesis).Supervisor: Prof. Antonio Canale; Co-supervisor: Prof. Michele Guindani. Research Padua Archive, Full text</description>
     </item>
     
