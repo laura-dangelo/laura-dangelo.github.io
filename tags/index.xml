@@ -5,10 +5,6 @@
     <link>https://laura-dangelo.github.io/tags/</link>
     <description>Recent content in Tags on Laura D&#39;Angelo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-	<atom:link href="https://laura-dangelo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en</language><atom:link href="https://laura-dangelo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

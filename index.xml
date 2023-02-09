@@ -5,11 +5,7 @@
     <link>https://laura-dangelo.github.io/</link>
     <description>Recent content on Laura D&#39;Angelo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-	<atom:link href="https://laura-dangelo.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en</language><atom:link href="https://laura-dangelo.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://laura-dangelo.github.io/about/</link>
@@ -37,7 +33,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laura-dangelo.github.io/contact/</guid>
-      <description>Office 2092/b, second floor U7 building.Department of Economics, Management and Statistics (DEMS) University of Milano-Bicocca Piazza dell’Ateneo Nuovo 1, 20126 Milan Email laura.dangelo@unimib.it </description>
+      <description>Office 2092/b, second floor U7 building.Department of Economics, Management and Statistics (DEMS) University of Milano-Bicocca Piazza dell’Ateneo Nuovo 1, 20126 Milan Email    laura.dangelo@unimib.it </description>
     </item>
     
     <item>
@@ -57,7 +53,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laura-dangelo.github.io/resume/</guid>
-      <description>Current position Postdoctoral researcher at the Department of Economics, Management and Statistics (DEMS), University of Milano-Bicocca. Education PhD student in Statistical Science 10/2018 – 11/2021, University of Padova. Thesis title: Bayesian modeling of calcium imaging data. Supervisor: Prof. Antonio Canale. Co-supervisor: Prof. Michele Guindani. Master’s Degree in Statistics 10/2015 – 11/2017, University of Padova. Thesis title: Modelli Bayesiani nonparametrici: applicazioni al settore assicurativo (Bayesian nonparametric models: applications in insurance).Supervisor: Prof. Antonio Canale.</description>
+      <description>Current position    Postdoctoral researcher at the Department of Economics, Management and Statistics (DEMS), University of Milano-Bicocca. Education    PhD student in Statistical Science 10/2018 – 11/2021, University of Padova. Thesis title: Bayesian modeling of calcium imaging data. Supervisor: Prof. Antonio Canale. Co-supervisor: Prof. Michele Guindani. Master’s Degree in Statistics 10/2015 – 11/2017, University of Padova. Thesis title: Modelli Bayesiani nonparametrici: applicazioni al settore assicurativo (Bayesian nonparametric models: applications in insurance).</description>
     </item>
     
   </channel>
