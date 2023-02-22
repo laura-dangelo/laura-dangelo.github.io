@@ -1,5 +1,5 @@
  
-@article{dangelo2022,
+@article{dangelocanale2022poisson,
 	author = {Laura D’Angelo and Antonio Canale},
 	title = {{Efficient posterior sampling for Bayesian Poisson regression}},
 	journal = {Journal of Computational and Graphical Statistics},

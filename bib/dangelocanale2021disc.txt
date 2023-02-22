@@ -1,0 +1,8 @@
+@misc{dangelocanale2021discussion,
+	title = {Contributed Discussion on: ``Centered Partition Processes: Informative Priors for Clustering''},
+	date = {2021},
+	journal ={Bayesian Analysis},
+	volume =  {16},
+	number = {1},
+	pages = {356 -- 358}
+}

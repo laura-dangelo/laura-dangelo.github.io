@@ -1,0 +1,10 @@
+@inproceedings{dangelo2022sis,
+	author = {D'Angelo, Laura},
+	publisher = {Pearson},
+	title = {Bayesian nonparametric clustering of spatially-referenced spike train data},
+	year = {2022},
+	pages = {514 -- 519},
+	booktitle = {Book of Short Papers SIS 2022},
+	location = {Caserta, Italy},
+	isbn = {9788891932310}
+}

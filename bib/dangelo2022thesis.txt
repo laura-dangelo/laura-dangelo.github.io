@@ -1,0 +1,8 @@
+@thesis{dangelo2022thesis,
+	author = {Laura D'Angelo},
+	title = {Bayesian modeling of calcium imaging data},
+	type = {PhD thesis},
+	institution = {Department of Statistical Science, University of Padova},
+	date = {2022},
+	location = {Padova, Italy}
+}

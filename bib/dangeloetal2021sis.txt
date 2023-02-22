@@ -1,0 +1,9 @@
+@inproceedings{dangeloetal2021sis,
+	author = {D'Angelo, Laura and Canale, Antonio and Yu, Zhaoxia and Guindani, Michele},
+	publisher = {Pearson},
+	title = {Detection of neural activity in calcium imaging data via Bayesian mixture models},
+	year = {2021},
+	pages = {745-–750},
+	booktitle = {Book of Short Papers SIS 2021},
+	isbn = {9788891927361}
+}

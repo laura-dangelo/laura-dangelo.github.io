@@ -1,4 +1,4 @@
-@article{dangelo2022,
+@article{dangelo2022calcium,
 	author = {D'Angelo, Laura and Canale, Antonio and Yu, Zhaoxia and Guindani, Michele},
 	title = {Bayesian nonparametric analysis for the detection of spikes in noisy calcium imaging data},
 	journal = {Biometrics},

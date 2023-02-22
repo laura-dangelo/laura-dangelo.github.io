@@ -1,0 +1,10 @@
+@inproceedings{dentietal2022,
+	author = {Denti, Francesco and D'Angelo, Laura and Guindani, Michele},
+	publisher = {Pearson},
+	title = {Bayesian Approaches for Capturing the Heterogeneity of Neuroimaging Experiments},
+	year = {2022},
+	pages = {18--29},
+	booktitle = {Book of Short Papers SIS 2022},
+	location = {Caserta, Italy},
+	isbn = {9788891932310}
+}
