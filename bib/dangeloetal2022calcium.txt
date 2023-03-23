@@ -4,7 +4,7 @@
 	journal = {Biometrics},
 	year = {2022},
 	pages = {1 -- 13},
-	doi = {doi.org/10.1111/biom.13626},
+	doi = {10.1111/biom.13626},
 	volume = {0},
 	number = {0}
 }
