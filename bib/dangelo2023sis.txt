@@ -1,0 +1,9 @@
+@inproceedings{dangelo2023sis,
+	author = {D'Angelo, Laura},
+	publisher = {Pearson},
+	title = {A comparison of computational approaches for posterior inference in {Bayesian Poisson} regression},
+	year = {2023},
+	pages = {},
+	booktitle = {Book of Short Papers SIS 2023},
+	isbn = {}
+}

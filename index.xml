@@ -7,6 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://laura-dangelo.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title></title>
+      <link>https://laura-dangelo.github.io/publications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laura-dangelo.github.io/publications/</guid>
+      <description>Publications      D’Angelo L., Canale A., Yu Z. and Guindani M. (2023) Bayesian nonparametric analysis for the detection of spikes in noisy calcium imaging data. Biometrics, 79(2), 1370&amp;ndash;1382. Article . Citation
+  D’Angelo L. (2023) A comparison of computational approaches for posterior inference in Bayesian Poisson regression, in Book of Short Papers SIS 2023. Article . Citation
+  D’Angelo L. and Denti, F. (2023) Bayesian analysis of Amazon’s best-selling books via finite nested mixture models, in Book of Short Papers SIS 2023.</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>https://laura-dangelo.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -21,10 +32,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laura-dangelo.github.io/talks/</guid>
-      <description>Invited talk: &amp;ldquo;Bayesian nonparametric clustering of spatially-referenced spike train data&amp;rdquo;; SIS 2022, Caserta, Italy; June 22 – 24, 2022.
+      <description>Contributed talk: &amp;ldquo;A comparison of computational approaches for posterior inference in Bayesian Poisson regression&amp;rdquo;; SIS 2023, Ancona, Italy; June 21 – 23, 2023.
+  Invited talk: &amp;ldquo;Bayesian nonparametric clustering of spatially-referenced spike train data&amp;rdquo;; SIS 2022, Caserta, Italy; June 22 – 24, 2022.
   Discussant at the solicited session &amp;ldquo;Bayesian inference for complex random structures&amp;rdquo;; SIS 2022, Caserta, Italy; June 22 – 24, 2022.
-  Contributed talk: &amp;ldquo;Bayesian nonparametric analysis for the detection of spikes in noisy calcium imaging data&amp;rdquo;; JSM 2021; August 8 – 12, 2021.
-  Contributed talk: &amp;ldquo;Bayesian nonparametric analysis for the detection of spikes in noisy calcium imaging data&amp;rdquo;; ISBA 2021, June 23 – July 2; 2021.</description>
+  Contributed talk: &amp;ldquo;Bayesian nonparametric analysis for the detection of spikes in noisy calcium imaging data&amp;rdquo;; JSM 2021; August 8 – 12, 2021.</description>
     </item>
     
     <item>
@@ -34,17 +45,6 @@
       
       <guid>https://laura-dangelo.github.io/contact/</guid>
       <description>Office 2092/b, second floor U7 building.Department of Economics, Management and Statistics (DEMS) University of Milano-Bicocca Piazza dell’Ateneo Nuovo 1, 20126 Milan Email    laura.dangelo@unimib.it </description>
-    </item>
-    
-    <item>
-      <title>Publications</title>
-      <link>https://laura-dangelo.github.io/publications/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://laura-dangelo.github.io/publications/</guid>
-      <description>D’Angelo L. and Canale A. (2022) Efficient posterior sampling for Bayesian Poisson regression. Journal of Computational and Graphical Statistics, 1&amp;ndash;10. Article . Citation
-  D’Angelo L., Canale A., Yu Z. and Guindani M. (2022) Bayesian nonparametric analysis for the detection of spikes in noisy calcium imaging data. Biometrics, 1-13. Article . Citation
-  D&amp;rsquo;Angelo L. (2022) Bayesian modeling of calcium imaging data (PhD Thesis).Supervisor: Prof. Antonio Canale; Co-supervisor: Prof.</description>
     </item>
     
     <item>

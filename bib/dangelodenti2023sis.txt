@@ -1,0 +1,9 @@
+@inproceedings{dangelodenti2023sis,
+	author = {D'Angelo, Laura and Denti, Francesco},
+	publisher = {Pearson},
+	title = {Bayesian analysis of {Amazon}’s best-selling books via finite nested mixture models},
+	year = {2023},
+	pages = {},
+	booktitle = {Book of Short Papers SIS 2023},
+	isbn = {}
+}
