@@ -12,9 +12,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laura-dangelo.github.io/publications/</guid>
-      <description>Publications      D’Angelo L., Canale A., Yu Z. and Guindani M. (2023) Bayesian nonparametric analysis for the detection of spikes in noisy calcium imaging data. Biometrics, 79(2), 1370&amp;ndash;1382. Article . Citation
-  D’Angelo L. (2023) A comparison of computational approaches for posterior inference in Bayesian Poisson regression, in Book of Short Papers SIS 2023. Article . Citation
-  D’Angelo L. and Denti, F. (2023) Bayesian analysis of Amazon’s best-selling books via finite nested mixture models, in Book of Short Papers SIS 2023.</description>
+      <description>Publications      D’Angelo L. and Canale A. (2023) Efficient posterior sampling for Bayesian Poisson regression. Journal of Computational and Graphical Statistics, 32(3), 917&amp;ndash;926. Article . Citation
+  D’Angelo L., Canale A., Yu Z. and Guindani M. (2023) Bayesian nonparametric analysis for the detection of spikes in noisy calcium imaging data. Biometrics, 79(2), 1370&amp;ndash;1382. Article . Citation
+  D’Angelo L. (2023) A comparison of computational approaches for posterior inference in Bayesian Poisson regression, in Book of Short Papers SIS 2023.</description>
     </item>
     
     <item>
@@ -32,10 +32,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laura-dangelo.github.io/talks/</guid>
-      <description>Contributed talk: &amp;ldquo;A comparison of computational approaches for posterior inference in Bayesian Poisson regression&amp;rdquo;; SIS 2023, Ancona, Italy; June 21 – 23, 2023.
+      <description>Invited talk: &amp;ldquo;A Bayesian hierarchical mixture model for clustering Spotify’s songs and artists&amp;rdquo;; StaTalk 2023, Roma, Italy; September 15, 2023.
+  Contributed talk: &amp;ldquo;A comparison of computational approaches for posterior inference in Bayesian Poisson regression&amp;rdquo;; SIS 2023, Ancona, Italy; June 21 – 23, 2023.
   Invited talk: &amp;ldquo;Bayesian nonparametric clustering of spatially-referenced spike train data&amp;rdquo;; SIS 2022, Caserta, Italy; June 22 – 24, 2022.
-  Discussant at the solicited session &amp;ldquo;Bayesian inference for complex random structures&amp;rdquo;; SIS 2022, Caserta, Italy; June 22 – 24, 2022.
-  Contributed talk: &amp;ldquo;Bayesian nonparametric analysis for the detection of spikes in noisy calcium imaging data&amp;rdquo;; JSM 2021; August 8 – 12, 2021.</description>
+  Discussant at the solicited session &amp;ldquo;Bayesian inference for complex random structures&amp;rdquo;; SIS 2022, Caserta, Italy; June 22 – 24, 2022.</description>
     </item>
     
     <item>
