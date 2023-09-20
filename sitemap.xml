@@ -2,23 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://laura-dangelo.github.io/about/</loc>
+  </url><url>
+    <loc>https://laura-dangelo.github.io/contact/</loc>
+  </url><url>
     <loc>https://laura-dangelo.github.io/publications/</loc>
   </url><url>
-    <loc>https://laura-dangelo.github.io/about/</loc>
+    <loc>https://laura-dangelo.github.io/talks/</loc>
+  </url><url>
+    <loc>https://laura-dangelo.github.io/teaching/</loc>
   </url><url>
     <loc>https://laura-dangelo.github.io/authors/</loc>
   </url><url>
     <loc>https://laura-dangelo.github.io/categories/</loc>
-  </url><url>
-    <loc>https://laura-dangelo.github.io/talks/</loc>
-  </url><url>
-    <loc>https://laura-dangelo.github.io/contact/</loc>
   </url><url>
     <loc>https://laura-dangelo.github.io/</loc>
   </url><url>
     <loc>https://laura-dangelo.github.io/resume/</loc>
   </url><url>
     <loc>https://laura-dangelo.github.io/series/</loc>
+  </url><url>
+    <loc>https://laura-dangelo.github.io/stat_modelling/</loc>
   </url><url>
     <loc>https://laura-dangelo.github.io/tags/</loc>
   </url>

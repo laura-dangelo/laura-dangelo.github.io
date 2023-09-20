@@ -8,43 +8,51 @@
     <language>en</language><atom:link href="https://laura-dangelo.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
+      <link>https://laura-dangelo.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laura-dangelo.github.io/about/</guid>
+      <description>About     I am a postdoctoral researcher in Statistics at the Department of Economics, Management and Statistics (DEMS) at University of Milano-Bicocca (Milan, Italy), working under the supervision of Prof. Bernardo Nipoti (DEMS, University of Milano-Bicocca). I have received my PhD degree in Statistics at Universiy of Padova (Padova, Italy) in 2022 under the supervision of Prof. Antonio Canale (Department of Statistical Sciences, University of Padova) and Prof.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://laura-dangelo.github.io/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laura-dangelo.github.io/contact/</guid>
+      <description>Contact     Office 2092/b, second floor U7 building.Department of Economics, Management and Statistics (DEMS) University of Milano-Bicocca Piazza dell’Ateneo Nuovo 1, 20126 Milan Email    laura.dangelo@unimib.it </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://laura-dangelo.github.io/publications/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laura-dangelo.github.io/publications/</guid>
-      <description>Publications      D’Angelo L. and Canale A. (2023) Efficient posterior sampling for Bayesian Poisson regression. Journal of Computational and Graphical Statistics, 32(3), 917&amp;ndash;926. Article . Citation
+      <description>Publications       D’Angelo L. and Canale A. (2023) Efficient posterior sampling for Bayesian Poisson regression. Journal of Computational and Graphical Statistics, 32(3), 917&amp;ndash;926. Article . Citation
   D’Angelo L., Canale A., Yu Z. and Guindani M. (2023) Bayesian nonparametric analysis for the detection of spikes in noisy calcium imaging data. Biometrics, 79(2), 1370&amp;ndash;1382. Article . Citation
   D’Angelo L. (2023) A comparison of computational approaches for posterior inference in Bayesian Poisson regression, in Book of Short Papers SIS 2023.</description>
     </item>
     
     <item>
-      <title>About</title>
-      <link>https://laura-dangelo.github.io/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://laura-dangelo.github.io/about/</guid>
-      <description>I am a postdoctoral researcher in Statistics at the Department of Economics, Management and Statistics (DEMS) at University of Milano-Bicocca (Milan, Italy), working under the supervision of Prof. Bernardo Nipoti (DEMS, University of Milano-Bicocca). I have received my PhD degree in Statistics at Universiy of Padova (Padova, Italy) in 2022 under the supervision of Prof. Antonio Canale (Department of Statistical Sciences, University of Padova) and Prof. Michele Guindani (Department of Biostatistics, UCLA).</description>
-    </item>
-    
-    <item>
-      <title>Conference presentations</title>
+      <title></title>
       <link>https://laura-dangelo.github.io/talks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laura-dangelo.github.io/talks/</guid>
-      <description>Invited talk: &amp;ldquo;A Bayesian hierarchical mixture model for clustering Spotify’s songs and artists&amp;rdquo;; StaTalk 2023, Roma, Italy; September 15, 2023.
+      <description>Conference presentations       Invited talk: &amp;ldquo;A Bayesian hierarchical mixture model for clustering Spotify’s songs and artists&amp;rdquo;; StaTalk 2023, Roma, Italy; September 15, 2023.
   Contributed talk: &amp;ldquo;A comparison of computational approaches for posterior inference in Bayesian Poisson regression&amp;rdquo;; SIS 2023, Ancona, Italy; June 21 – 23, 2023.
-  Invited talk: &amp;ldquo;Bayesian nonparametric clustering of spatially-referenced spike train data&amp;rdquo;; SIS 2022, Caserta, Italy; June 22 – 24, 2022.
-  Discussant at the solicited session &amp;ldquo;Bayesian inference for complex random structures&amp;rdquo;; SIS 2022, Caserta, Italy; June 22 – 24, 2022.</description>
+  Invited talk: &amp;ldquo;Bayesian nonparametric clustering of spatially-referenced spike train data&amp;rdquo;; SIS 2022, Caserta, Italy; June 22 – 24, 2022.</description>
     </item>
     
     <item>
-      <title>Contact</title>
-      <link>https://laura-dangelo.github.io/contact/</link>
+      <title></title>
+      <link>https://laura-dangelo.github.io/teaching/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://laura-dangelo.github.io/contact/</guid>
-      <description>Office 2092/b, second floor U7 building.Department of Economics, Management and Statistics (DEMS) University of Milano-Bicocca Piazza dell’Ateneo Nuovo 1, 20126 Milan Email    laura.dangelo@unimib.it </description>
+      <guid>https://laura-dangelo.github.io/teaching/</guid>
+      <description>Teaching     Statistical Modelling (A.A. 2023/2024) B.Sc. course in Artificial Intelligence. Inter-university project of the Universities of Milano-Bicocca, Milano Statale and Pavia.</description>
     </item>
     
     <item>
@@ -54,6 +62,15 @@
       
       <guid>https://laura-dangelo.github.io/resume/</guid>
       <description>Current position    Postdoctoral researcher at the Department of Economics, Management and Statistics (DEMS), University of Milano-Bicocca. Education    PhD student in Statistical Science 10/2018 – 11/2021, University of Padova. Thesis title: Bayesian modeling of calcium imaging data. Supervisor: Prof. Antonio Canale. Co-supervisor: Prof. Michele Guindani. Master’s Degree in Statistics 10/2015 – 11/2017, University of Padova. Thesis title: Modelli Bayesiani nonparametrici: applicazioni al settore assicurativo (Bayesian nonparametric models: applications in insurance).</description>
+    </item>
+    
+    <item>
+      <title>Statistical Modelling course</title>
+      <link>https://laura-dangelo.github.io/stat_modelling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laura-dangelo.github.io/stat_modelling/</guid>
+      <description>Calendar (provisional)</description>
     </item>
     
   </channel>
