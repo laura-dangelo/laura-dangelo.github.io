@@ -1,4 +1,5 @@
 @misc{dangelocanale2021discussion,
+	author = {D'Angelo, Laura and Canale, Antonio}
 	title = {Contributed Discussion on: ``Centered Partition Processes: Informative Priors for Clustering''},
 	date = {2021},
 	journal ={Bayesian Analysis},
