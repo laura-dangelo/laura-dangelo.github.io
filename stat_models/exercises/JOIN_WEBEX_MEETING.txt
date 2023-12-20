@@ -1,0 +1,37 @@
+JOIN WEBEX MEETING
+https://unimib.webex.com/unimib/j.php?MTID=m5240e419f2bcef89610dd0b035e889b5
+Meeting number (access code): 2740 348 0526
+
+Meeting password: aHdy8mWSK23 (24398697 from phones)
+
+
+TAP TO JOIN FROM A MOBILE DEVICE (ATTENDEES ONLY)
++390230410440,,27403480526#24398697# tel:%2B390230410440,,*01*27403480526%2324398697%23*01* Italy toll
++39-06-9974-8087,,27403480526#24398697# tel:%2B39-06-9974-8087,,*01*27403480526%2324398697%23*01* Italy Toll 2
+Some mobile devices may ask attendees to enter a numeric password.
+
+
+JOIN BY PHONE
++39 0230410 440 Italy toll
++39-06-9974-8087 Italy Toll 2
+
+Global call-in numbers
+https://unimib.webex.com/unimib/globalcallin.php?MTID=mb163f26c07af46b3aac19592d3e937da
+
+
+JOIN FROM A VIDEO SYSTEM OR APPLICATION
+Dial sip:27403480526@unimib.webex.com
+You can also dial 62.109.219.4 and enter your meeting number.
+
+Can't join the meeting?
+https://collaborationhelp.cisco.com/article/WBX000029055
+
+If you are a host, click here and login site to view host information:
+https://unimib.webex.com/webappng/sites/unimib/meeting/info/2eeb18cb331b49d985e5bb86ef8369b1
+
+IMPORTANT NOTICE: Please note that this Webex service allows audio and other information sent during the session to be recorded, which may be discoverable in a legal matter. By joining this session, you automatically consent to such recordings. If you do not consent to being recorded, discuss your concerns with the host or do not join the session.
+
+Quando
+giovedì 21 dic 2023 ⋅ 11:30AM – 2:30PM (Ora dell’Europa centrale - Roma)
+Località
+https://unimib.webex.com/unimib/j.php?MTID=m3008fc13ea339484b1053c39498f46e0
