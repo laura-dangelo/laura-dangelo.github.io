@@ -1,0 +1,9 @@
+@article{dentidangelo2025,
+	author = {Francesco Denti and Laura D’Angelo},
+	title = {{The generalized nested common atoms model}},
+	journal = {Econometrics and Statistics},
+	pages = {1 -- 28},
+	year = {2025},
+	doi = {10.1016/j.ecosta.2025.01.001},
+	URL = {https://www.sciencedirect.com/science/article/pii/S2452306225000012}
+}
