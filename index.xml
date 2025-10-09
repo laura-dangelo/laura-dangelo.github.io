@@ -2,65 +2,65 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Laura D&#39;Angelo</title>
-    <link>http://localhost:1313/</link>
+    <link>https://laura-dangelo.github.io/</link>
     <description>Recent content on Laura D&#39;Angelo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://laura-dangelo.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://laura-dangelo.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://laura-dangelo.github.io/about/</guid>
       <description>About I am a postdoctoral researcher in Statistics at the Department of Economics, Management and Statistics (DEMS) at the University of Milano-Bicocca (Milano, Italy), working under the supervision of Prof. Bernardo Nipoti (DEMS, University of Milano-Bicocca). I received my PhD in Statistics at the Universiy of Padova (Padova, Italy) in 2022, supervised by Prof. Antonio Canale (Department of Statistical Sciences, University of Padova) and Prof. Michele Guindani (Department of Biostatistics, UCLA).</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/contact/</link>
+      <link>https://laura-dangelo.github.io/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/contact/</guid>
+      <guid>https://laura-dangelo.github.io/contact/</guid>
       <description> Contact Office 2092/b, second floor U7 building.&#xA;Department of Economics, Management and Statistics (DEMS) University of Milano-Bicocca Piazza dell’Ateneo Nuovo 1, 20126 Milan Email laura.dangelo@unimib.it </description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/publications/</link>
+      <link>https://laura-dangelo.github.io/publications/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/publications/</guid>
+      <guid>https://laura-dangelo.github.io/publications/</guid>
       <description>Preprints D’Angelo L., Nipoti B., and Ongaro A. (2025) &amp;ldquo;Dependent Dirichlet processes via thinning&amp;rdquo;. arXiv preprint, arXiv:2506.18223, 1&amp;ndash;28.&#xA;D’Angelo L., Denti F., Canale A., and Guindani M. (2025) &amp;ldquo;Decoding neuronal ensembles from spatially-referenced calcium traces: a Bayesian semiparametric approach&amp;rdquo;. arXiv preprint, arXiv:2508.09576, 1&amp;ndash;17.&#xA;Denti F. and D’Angelo L. (2025) &amp;ldquo;sanba: Fitting shared atoms nested models via MCMC or variational Bayes&amp;rdquo;. arXiv preprint, arXiv:2508.09758, 1&amp;ndash;29.&#xA;Articles in refereed journals Denti F.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/statistical_modelling/</link>
+      <link>https://laura-dangelo.github.io/statistical_modelling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/statistical_modelling/</guid>
+      <guid>https://laura-dangelo.github.io/statistical_modelling/</guid>
       <description>Statistical Modelling course Third year course of the B.Sc. course in Artificial Intelligence (Universities of Milano-Bicocca, Milano Statale and Pavia).&#xA;A.A. 2023/2024, 1st semester.&#xA;6 CFU (32 hours lectures, 24 hours exercise classes).&#xA;Communications 10/01/2024: The exam will include 2 or 3 exercises (in line with the exercises seen during the course).&#xA;Please bring:&#xA;✓ a calculator,&#xA;✓ ID or student card,&#xA;✓ a pen.&#xA;Course notes, books, and other materials are NOT allowed (including mobile phones, smart watches, etc).</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/statistical_modelling2425/</link>
+      <link>https://laura-dangelo.github.io/statistical_modelling2425/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/statistical_modelling2425/</guid>
+      <guid>https://laura-dangelo.github.io/statistical_modelling2425/</guid>
       <description>Statistical Modelling course Third year course of the B.Sc. course in Artificial Intelligence (Universities of Milano-Bicocca, Milano Statale and Pavia).&#xA;A.A. 2024/2025, 1st semester.&#xA;6 CFU (32 hours lectures, 24 hours exercise classes).&#xA;Communications The class scheduled for Tuesday, November 12 (h. 12.30) is canceled. The class scheduled for Tuesday, October 15 (h. 12.30) is canceled. We will regularly meet on Thursday, October 17 (h. 11.30). Please enroll to the course on the Kiro platform to receive communications.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/statistical_modelling2526/</link>
+      <link>https://laura-dangelo.github.io/statistical_modelling2526/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/statistical_modelling2526/</guid>
+      <guid>https://laura-dangelo.github.io/statistical_modelling2526/</guid>
       <description>Statistical Modelling course Third-year course of the B.Sc. in Artificial Intelligence (Universities of Milano-Bicocca, Milano and Pavia).&#xA;A.A. 2025/2026, 1st semester.&#xA;Communications Please sign up for the course on the Kiro platform to receive communications via email. Contacts laura.dangelo@unimib.it&#xA;Calendar (may be subject to change)&#xA;Course material Lecture notes The course material is largely based on the book &amp;ldquo;Modello lineare - Teoria e Applicazioni con R&amp;rdquo; (Grigoletto M., Pauli F.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/talks/</link>
+      <link>https://laura-dangelo.github.io/talks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/talks/</guid>
+      <guid>https://laura-dangelo.github.io/talks/</guid>
       <description>Conference presentations Contributed talk: &amp;ldquo;Dependent Dirichlet processes via thinning&amp;rdquo;; BNP, Los Angeles, USA; June 23 – 27, 2025.&#xA;Contributed talk: &amp;ldquo;Modeling related survival samples via dependent nonparametric mixtures&amp;rdquo;; SIS 2025, Genova, Italy; June 16 – 18, 2025.&#xA;Invited talk: &amp;ldquo;Flexible modeling of grouped multivariate data via Bayesian shared-atom nested mixture models&amp;rdquo;; CMStatistics 2024, London, UK; December 14 – 16, 2024.&#xA;Invited talk: &amp;ldquo;Uncovering the heterogeneity of the neuronal activity in calcium imaging studies via Bayesian mixture models&amp;rdquo;; ISBA 2024, Venezia, Italy; July 1 - 7, 2024.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/teaching/</link>
+      <link>https://laura-dangelo.github.io/teaching/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/teaching/</guid>
+      <guid>https://laura-dangelo.github.io/teaching/</guid>
       <description>Teaching Statistical Modelling (A.A. 2025/2026)&#xA;B.Sc. course in Artificial Intelligence. Inter-university project of the Universities of Milano-Bicocca, Milano Statale and Pavia.</description>
     </item>
   </channel>
