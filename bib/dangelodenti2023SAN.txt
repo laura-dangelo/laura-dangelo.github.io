@@ -1,8 +1,10 @@
 @article{dangelodenti2023,
 	author = {D'Angelo, Laura and Denti, Francesco},
 	title = {A finite-infinite shared atoms nested model for the {Bayesian} analysis of large grouped data sets},
-	year = {2023},
-	pages = {1--24},
-	journal = {arXiv},
-	number = {arxiv:xxxxxxx}
+	year = {2026},
+	pages = {105--138},
+	journal = {Bayesian Analysis},
+	volume = {21}
+	number = {1}
 }
+

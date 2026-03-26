@@ -1,0 +1,14 @@
+
+@article{dangelodenti2026,
+	author = {Laura D’Angelo and Francesco Denti},
+	title = {{A Finite-Infinite Shared Atoms Nested Model for the Bayesian Analysis of Large Grouped Data Sets}},
+	volume = {21},
+	journal = {Bayesian Analysis},
+	number = {1},
+	publisher = {International Society for Bayesian Analysis},
+	pages = {105 -- 138},
+	keywords = {Dirichlet process, finite mixture, multivariate data, partially exchangeable data, variational Bayes},
+	year = {2026},
+	doi = {10.1214/24-BA1458},
+	URL = {https://doi.org/10.1214/24-BA1458}
+}
