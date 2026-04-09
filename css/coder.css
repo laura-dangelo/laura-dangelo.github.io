@@ -3884,6 +3884,11 @@ img.emoji {
     font-style: italic;
     font-size: 1.6rem;
     margin: 0; }
+  .content ul {
+    padding-left: 2rem;
+    margin-left: 0; }
+  .content li {
+    margin-left: 0; }
 
 .avatar img {
   width: 20rem;
@@ -3895,9 +3900,7 @@ img.emoji {
 .list ul {
   margin: 3.2rem 0 3.2rem 0;
   list-style: none;
-  padding: 0;
-  padding-left: 1.5rem;
-  margin-left: 0; }
+  padding: 0; }
   .list ul li {
     font-size: 1.8rem; }
     @media only screen and (max-width: 768px) {
