@@ -3678,7 +3678,7 @@ h6 {
       line-height: 1.6em; } }
 b,
 strong {
-  font-weight: 490; }
+  font-weight: 590; }
 
 .highlight > div,
 .highlight > pre {
@@ -3895,7 +3895,9 @@ img.emoji {
 .list ul {
   margin: 3.2rem 0 3.2rem 0;
   list-style: none;
-  padding: 0; }
+  padding: 0;
+  padding-left: 1.5rem;
+  margin-left: 0; }
   .list ul li {
     font-size: 1.8rem; }
     @media only screen and (max-width: 768px) {
