@@ -3630,7 +3630,7 @@ h6 {
     text-decoration: none; }
 
 h1 {
-  font-weight: 390;
+  font-weight: 400;
   font-size: 4rem;
   line-height: 3.6rem; }
   @media only screen and (max-width: 768px) {
@@ -3638,7 +3638,7 @@ h1 {
       font-size: 3rem;
       line-height: 3.4rem; } }
 h2 {
-  font-weight: 367;
+  font-weight: 400;
   font-size: 2rem;
   line-height: 3.2rem; }
   @media only screen and (max-width: 768px) {
@@ -3648,7 +3648,7 @@ h2 {
 h3 {
   font-size: 2rem;
   line-height: 1.8rem;
-  font-weight: 390; }
+  font-weight: 400; }
   @media only screen and (max-width: 768px) {
     h3 {
       font-size: 3rem;
@@ -3656,7 +3656,7 @@ h3 {
 h4 {
   font-size: 2rem;
   line-height: 2rem;
-  font-weight: 390; }
+  font-weight: 400; }
   @media only screen and (max-width: 768px) {
     h4 {
       font-size: 3rem;
@@ -3670,7 +3670,7 @@ h5 {
       line-height: 2.2rem; } }
 h6 {
   font-size: 1.7em;
-  font-weight: 490;
+  font-weight: 420;
   line-height: 1.8em; }
   @media only screen and (max-width: 768px) {
     h6 {
@@ -3678,7 +3678,7 @@ h6 {
       line-height: 1.6em; } }
 b,
 strong {
-  font-weight: 590; }
+  font-weight: 401; }
 
 .highlight > div,
 .highlight > pre {
