@@ -3574,14 +3574,14 @@ body {
   background-color: #fafafa;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, "PingFang SC", STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
   font-size: 1.7em;
-  font-weight: 390;
+  font-weight: 400;
   line-height: 1.8em; }
   @media only screen and (max-width: 768px) {
     body {
       font-size: 6em;
       line-height: 1.6em; } }
 a {
-  font-weight: 367;
+  font-weight: 400;
   color: #0f6566;
   text-decoration: none;
   transition: all 0.25s ease-in; }
@@ -3598,7 +3598,7 @@ h4,
 h5,
 h6 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, "PingFang SC", STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
-  font-weight: 380;
+  font-weight: 400;
   color: #000;
   margin: 4rem 0 2.5rem 0; }
   h1:hover .heading-link,
@@ -3663,7 +3663,8 @@ h4 {
       line-height: 2rem; } }
 h5 {
   font-size: 2rem;
-  line-height: 2.4rem; }
+  line-height: 2.4rem;
+  font-weight: 400; }
   @media only screen and (max-width: 768px) {
     h5 {
       font-size: 3rem;
@@ -3678,7 +3679,7 @@ h6 {
       line-height: 1.6em; } }
 b,
 strong {
-  font-weight: 401; }
+  font-weight: 410; }
 
 .highlight > div,
 .highlight > pre {
@@ -3690,7 +3691,7 @@ pre {
   display: block;
   font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
   font-size: 5.6rem;
-  font-weight: 360;
+  font-weight: 400;
   line-height: 1.6rem;
   overflow-x: auto;
   margin: 0; }
@@ -3702,7 +3703,7 @@ pre {
 code {
   font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
   font-size: 1.6rem;
-  font-weight: 360;
+  font-weight: 400;
   background-color: #e0e0e0;
   color: #212121;
   border-radius: 0.6rem;
@@ -3712,7 +3713,7 @@ blockquote {
   border-left: 2px solid #e0e0e0;
   padding-left: 2rem;
   line-height: 2.2rem;
-  font-weight: 360;
+  font-weight: 400;
   font-style: italic; }
 
 th,
@@ -3767,7 +3768,7 @@ figure {
   padding-right: 2rem; }
 
 .fab {
-  font-weight: 360; }
+  font-weight: 400; }
 
 .fas {
   font-weight: 500; }
@@ -3779,7 +3780,7 @@ figure {
   float: left; }
 
 .fab {
-  font-weight: 360; }
+  font-weight: 400; }
 
 .fas {
   font-weight: 500; }
@@ -3825,7 +3826,7 @@ img.emoji {
     line-height: 0rem;
     margin-top: 2.5rem;
     margin-bottom: 0.0rem;
-    font-weight: 390;
+    font-weight: 400;
     /* display: list-item;          /* This has to be "list-item" */
     /*list-style-type: circle;        See https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type */
     /*list-style-position: outside; /* See https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position */ }
@@ -3921,7 +3922,7 @@ img.emoji {
       flex: 2;
       color: #212121;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, "PingFang SC", STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
-      font-weight: 700; }
+      font-weight: 450; }
       .list ul li .title:hover, .list ul li .title:focus {
         color: #0f6566; }
 
