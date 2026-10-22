@@ -1,0 +1,12 @@
+ 
+@article{thinnedDDP,
+	author = {D'Angelo, Laura and Nipoti, Bernardo and Ongaro, Andrea},
+	title = {{Dependent Dirichlet processes via thinning}},
+	journal = {Journal of Computational and Graphical Statistics},
+	pages = {1--29},
+	year  = {2026},
+	publisher = {Taylor & Francis},
+	doi = {10.1080/10618600.2026.2750481},
+	volume = {0},
+	number = {0}
+}
