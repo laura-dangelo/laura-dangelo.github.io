@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Two-way ANOVA explorer</title>
+<style>
+:root{--bg:#ffffff;--surface:#f3f4f6;--text:#14171a;--text2:#4b5563;--muted:#6b7280;--border:rgba(0,0,0,.12);--border-strong:rgba(0,0,0,.3);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#16181b;--surface:#202327;--text:#eceef0;--text2:#b4b9bf;--muted:#8b9199;--border:rgba(255,255,255,.14);--border-strong:rgba(255,255,255,.34);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#16181b;--surface:#202327;--text:#eceef0;--text2:#b4b9bf;--muted:#8b9199;--border:rgba(255,255,255,.14);--border-strong:rgba(255,255,255,.34);color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:24px 16px 40px}
+h1{font-size:22px;font-weight:500;margin:0 0 4px}
+h2{font-size:17px;font-weight:500;margin:0 0 4px}
+.intro{color:var(--text2);font-size:14px;margin:0 0 1.5rem}
+.sub{color:var(--text2);font-size:13px;margin:0 0 10px}
+button,select{font:inherit;font-size:14px;color:var(--text);background:transparent;border:0.5px solid var(--border-strong);border-radius:8px;padding:6px 12px;cursor:pointer}
+button:hover,select:hover{background:var(--surface)}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid #2a78d6;outline-offset:2px}
+button.on{background:var(--surface);border-color:var(--text2)}
+input[type=range],input[type=checkbox]{accent-color:#2a78d6}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 1rem;align-items:center}
+.sl{display:grid;grid-template-columns:minmax(0,1fr) 36px;gap:2px 8px;align-items:center}
+.sl label{font-size:13px;color:var(--text2);grid-column:1/3}
+.sl span{font-size:13px;font-weight:500;text-align:right;grid-column:2;grid-row:2}
+.sl input{grid-column:1;grid-row:2;width:100%}
+.lg{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--text2);margin:0 0 6px}
+.lg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.cb{font-size:13px;display:flex;gap:6px;align-items:center;color:var(--text2)}
+.lab{font-size:13px;color:var(--text2)}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed;min-width:420px}
+th{font-weight:500;color:var(--text2);text-align:right;padding:6px 4px;border-bottom:0.5px solid var(--border-strong)}
+td{text-align:right;padding:6px 4px;border-bottom:0.5px solid var(--border);font-variant-numeric:tabular-nums}
+th:first-child,td:first-child{text-align:left;width:30%}
+.et td,.et th{text-align:center;width:auto}
+.et td:first-child,.et th:first-child{text-align:left}
+.box{background:var(--surface);border-radius:8px;padding:12px 14px;margin:0 0 1.25rem}
+.note{font-size:14px;line-height:1.6;margin:0;padding:10px 14px;background:var(--surface);border-radius:8px}
+.sec{border-top:0.5px solid var(--border-strong);padding-top:18px;margin-top:8px}
+</style>
+</head>
+<body>
+<main>
+<h1>Two-way ANOVA explorer</h1>
+<p class="intro">Survival time by poison type (I, II, III) and treatment (A to D). First choose how the data are generated, then choose which model to fit. The two choices are independent, so you can fit a model that is wrong for the data and see what the diagnostics show.</p>
+
+<h2>Generate the data</h2>
+<p class="sub">The data-generating process: which effects are really present.</p>
+<div class="row" id="presets">
+  <button data-p="0,0,0,0.6">No effects</button>
+  <button data-p="1.5,0,0,0.6">Only poison</button>
+  <button data-p="0,1.2,0,0.6">Only treatment</button>
+  <button data-p="1.5,1,0,0.6">Both, no interaction</button>
+  <button data-p="0,0,1.2,0.6">Interaction only</button>
+  <button data-p="1.5,1,1.2,0.6">Both and interaction</button>
+  <button data-p="real">Real data (Box and Cox)</button>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px 24px;margin:0 0 1rem">
+  <div class="sl"><label for="sa">Main effect of poison (I longest, III shortest)</label><input type="range" id="sa" min="0" max="2" step="0.1" value="1.5"><span id="va"></span></div>
+  <div class="sl"><label for="sb">Main effect of treatment (B best, A worst)</label><input type="range" id="sb" min="0" max="1.5" step="0.1" value="1"><span id="vb"></span></div>
+  <div class="sl"><label for="si">Interaction (treatment ranking depends on poison)</label><input type="range" id="si" min="0" max="1.5" step="0.1" value="1.2"><span id="vi"></span></div>
+  <div class="sl"><label for="sn">Noise (scatter between animals)</label><input type="range" id="sn" min="0.1" max="1.2" step="0.1" value="0.6"><span id="vn"></span></div>
+</div>
+<div class="row"><label class="cb"><input type="checkbox" id="het">Noise grows with the mean</label></div>
+
+<div class="sec">
+<h2>Fit a model</h2>
+<p class="sub">The model used for the ANOVA table, the fitted values and the residuals.</p>
+<div class="row" id="models">
+  <button data-m="full" class="on">Poison + treatment + interaction</button>
+  <button data-m="add">Poison + treatment</button>
+  <button data-m="pois">Poison only</button>
+  <button data-m="treat">Treatment only</button>
+  <button data-m="null">Mean only</button>
+</div>
+<div class="row" style="gap:18px;margin:0">
+  <label class="cb"><input type="checkbox" id="sf" checked>Show fitted model details</label>
+  <label class="cb"><input type="checkbox" id="sd2" checked>Show diagnostic plots</label>
+</div>
+</div>
+
+<div class="sec">
+<div class="lg" id="plg"></div>
+<div class="row" style="gap:18px;margin:0 0 6px">
+  <label class="cb"><input type="checkbox" id="cl" checked>Show fitted values (lines)</label>
+  <label class="cb"><input type="checkbox" id="cmn" checked>Show observed cell means (rings)</label>
+</div>
+<div id="mode" style="font-size:12px;color:var(--text2);margin:0 0 4px;min-height:16px"></div>
+<div style="position:relative;width:100%;height:300px;margin:0 0 1.5rem">
+  <canvas id="ch" role="img" aria-label="Plot of the response for each poison, one colour and marker shape per treatment, with the fitted values of the chosen model">Response by poison for four treatments.</canvas>
+</div>
+
+<div class="lab" style="margin:0 0 6px">Where the total variability goes (faded segments are terms the model leaves out, so they end up in the residual)</div>
+<div id="bar" style="display:flex;height:28px;gap:2px;border-radius:4px;overflow:hidden;margin:0 0 8px"></div>
+<div class="lg" id="barlg" style="margin:0 0 1.25rem"></div>
+
+<div class="tw">
+<table style="max-width:420px;min-width:0">
+  <thead><tr><th style="width:70%">Source</th><th>SS</th></tr></thead>
+  <tbody id="tb"></tbody>
+</table>
+</div>
+<p id="msg" class="note" style="margin:1rem 0 1.75rem"></p>
+</div>
+
+<div id="fm" class="sec" style="margin:0 0 1.75rem">
+  <h2>Fitted model</h2>
+  <div class="box" style="font-size:15px;line-height:1.8;margin-top:8px">
+    <div id="fx"></div>
+    <div style="font-size:13px;color:var(--text2);margin-top:4px">i = poison (I, II, III), j = treatment (A to D), k = animal (1 to 4). Sum-to-zero constraints: the α’s, the β’s, and each row and column of the (αβ)’s add up to 0.</div>
+  </div>
+  <div class="lab" style="margin:0 0 6px">Estimates. Inner cells are the interaction terms (αβ)ij, the last column is α̂i, the last row is β̂j, the corner is μ̂. A dash means the term is not in the model.</div>
+  <div class="tw"><table class="et" style="margin:0 0 10px"><tbody id="et"></tbody></table></div>
+  <div style="font-size:14px;margin:0 0 10px" id="sg"></div>
+  <div class="row" style="margin:0 0 6px">
+    <span class="lab">Worked example: poison</span><select id="exP" aria-label="Poison"><option value="0">I</option><option value="1" selected>II</option><option value="2">III</option></select>
+    <span class="lab">treatment</span><select id="exT" aria-label="Treatment"><option value="0">A</option><option value="1" selected>B</option><option value="2">C</option><option value="3">D</option></select>
+  </div>
+  <div class="box" style="font-size:14px;line-height:1.7;margin-bottom:0" id="ex"></div>
+</div>
+
+<div id="dg" class="sec">
+  <h2>Diagnostic plots</h2>
+  <p class="sub">Residuals of the fitted model.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:0 0 10px">
+    <div>
+      <div class="lab" style="margin:0 0 4px">Residuals vs fitted values</div>
+      <div style="position:relative;width:100%;height:240px"><canvas id="rc" role="img" aria-label="Residuals against fitted values, coloured by treatment">Residuals versus fitted values.</canvas></div>
+    </div>
+    <div>
+      <div class="lab" style="margin:0 0 4px">Residuals by poison and treatment</div>
+      <div style="position:relative;width:100%;height:240px"><canvas id="rg" role="img" aria-label="Residuals for each poison, coloured by treatment, with the mean residual of each cell shown as a ring">Residuals by group.</canvas></div>
+    </div>
+    <div>
+      <div class="lab" style="margin:0 0 4px">Normal Q-Q plot</div>
+      <div style="position:relative;width:100%;height:240px"><canvas id="qq" role="img" aria-label="Normal quantile-quantile plot of standardized residuals">Normal Q-Q plot.</canvas></div>
+    </div>
+  </div>
+  <div class="lg"><span style="color:var(--muted)">Rings in the middle plot are the mean residual of each cell: if the model fits, they sit on the zero line.</span></div>
+  <p id="dmsg" class="note"></p>
+</div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+var nA=3,nB=4,n=4,GM=6,mode='sim',model='full';
+var P=['I','II','III'],T=['A','B','C','D'];
+var MODELS={full:[1,1,1],add:[1,1,0],pois:[1,0,0],treat:[0,1,0],null:[0,0,0]};
+var cols=['#2a78d6','#eb6834','#1baf7a','#e87ba4'],dash=[[],[6,3],[2,3],[8,3,2,3]],sty=['circle','rect','triangle','rectRot'],off=[-0.18,-0.06,0.06,0.18];
+var V=[-1,1.2,-0.4,0.2],U=[1,-1,0],W=[1,-1,1,-1];
+var REAL=[
+ [[3.1,4.5,4.6,4.3],[8.2,11.0,8.8,7.2],[4.3,4.5,6.3,7.6],[4.5,7.1,6.6,6.2]],
+ [[3.6,2.9,4.0,2.3],[9.2,6.1,4.9,12.4],[4.4,3.5,3.1,4.0],[5.6,10.2,7.1,3.8]],
+ [[2.2,2.1,1.8,2.3],[3.0,3.7,3.8,2.9],[2.3,2.5,2.4,2.2],[3.0,3.6,3.1,3.3]]];
+function $(id){return document.getElementById(id)}
+var seed=11;function rnd(){seed=(seed*16807)%2147483647;return seed/2147483647}
+function gauss(){return Math.sqrt(-2*Math.log(rnd()+1e-9))*Math.cos(2*Math.PI*rnd())}
+var Z=[],JIT=[];
+for(var i=0;i<nA;i++){Z.push([]);JIT.push([]);for(var j=0;j<nB;j++){
+ var v=[];for(var k=0;k<n;k++)v.push(gauss());
+ var m=v.reduce(function(s,x){return s+x},0)/n;
+ var sd=Math.sqrt(v.reduce(function(s,x){return s+(x-m)*(x-m)},0)/(n-1));
+ Z[i].push(v.map(function(x){return (x-m)/sd}));
+ JIT[i].push(v.map(function(){return (rnd()-0.5)*0.1}));}}
+function lgamma(x){var c=[76.18009172947146,-86.50532032941677,24.01409824083091,-1.231739572450155,0.1208650973866179e-2,-0.5395239384953e-5];var y=x,t=x+5.5;t-=(x+0.5)*Math.log(t);var s=1.000000000190015;for(var i=0;i<6;i++)s+=c[i]/++y;return -t+Math.log(2.5066282746310005*s/x)}
+function betacf(a,b,x){var qab=a+b,qap=a+1,qam=a-1,c=1,d=1-qab*x/qap;if(Math.abs(d)<1e-30)d=1e-30;d=1/d;var h=d;
+for(var m=1;m<=200;m++){var m2=2*m,aa=m*(b-m)*x/((qam+m2)*(a+m2));d=1+aa*d;if(Math.abs(d)<1e-30)d=1e-30;c=1+aa/c;if(Math.abs(c)<1e-30)c=1e-30;d=1/d;h*=d*c;
+aa=-(a+m)*(qab+m)*x/((a+m2)*(qap+m2));d=1+aa*d;if(Math.abs(d)<1e-30)d=1e-30;c=1+aa/c;if(Math.abs(c)<1e-30)c=1e-30;d=1/d;var del=d*c;h*=del;if(Math.abs(del-1)<3e-12)break}return h}
+function ibeta(x,a,b){if(x<=0)return 0;if(x>=1)return 1;var bt=Math.exp(lgamma(a+b)-lgamma(a)-lgamma(b)+a*Math.log(x)+b*Math.log(1-x));
+return x<(a+1)/(a+b+2)?bt*betacf(a,b,x)/a:1-bt*betacf(b,a,1-x)/b}
+function pF(F,d1,d2){return ibeta(d2/(d2+d1*F),d2/2,d1/2)}
+function qn(p){var q=p<0.5?p:1-p,t=Math.sqrt(-2*Math.log(q));
+ var x=t-(2.515517+0.802853*t+0.010328*t*t)/(1+1.432788*t+0.189269*t*t+0.001308*t*t*t);return p<0.5?-x:x}
+function fmtp(p){return p<0.001?'<0.001':p.toFixed(3)}
+function f(x){var a=Math.abs(x);return a>=100?x.toFixed(0):a>=10?x.toFixed(1):a>=1?x.toFixed(2):x.toFixed(3)}
+function sg(x){return (x<0?'\u2212':'+')+f(Math.abs(x))}
+
+function css(name){return getComputedStyle(document.documentElement).getPropertyValue(name).trim()}
+var tc=css('--muted')||'#6b7280',bgc=css('--bg')||'#ffffff',gc='rgba(128,128,128,0.2)';
+function mk(id,xt,yt,xo){return new Chart($(id),{type:'scatter',data:{datasets:[]},options:{responsive:true,maintainAspectRatio:false,animation:false,
+ plugins:{legend:{display:false},tooltip:{enabled:false}},
+ scales:{x:Object.assign({title:{display:true,text:xt,color:tc},grid:{color:gc},ticks:{color:tc}},xo||{}),
+ y:{title:{display:true,text:yt,color:tc},grid:{color:gc},ticks:{color:tc}}}}})}
+var pxo={min:-0.5,max:2.5,grid:{display:false},ticks:{stepSize:1,color:tc,callback:function(v){return P[v]||''}}};
+var ch=mk('ch','Poison','Survival time (hours)',pxo);
+var rc=mk('rc','Fitted value','Residual');
+var rg=mk('rg','Poison','Residual',pxo);
+var qq=mk('qq','Theoretical quantile','Standardized residual',{min:-3,max:3});
+
+var comps=[['Poison','#6250d6'],['Treatment','#eda100'],['Poison \u00d7 treatment','#e34948'],['Error','#888780']];
+$('plg').innerHTML=T.map(function(t,j){return '<span><i style="background:'+cols[j]+'"></i>Treatment '+t+'</span>'}).join('')+'<span style="color:var(--muted)">Marker shape also identifies the treatment</span>';
+
+function run(){
+ var pe=+$('sa').value,te=+$('sb').value,ti=+$('si').value,sd=+$('sn').value,het=$('het').checked,showFit=$('cl').checked,showMeans=$('cmn').checked;
+ $('va').textContent=pe.toFixed(1);$('vb').textContent=te.toFixed(1);$('vi').textContent=ti.toFixed(1);$('vn').textContent=sd.toFixed(1);
+ var M=MODELS[model],inP=M[0],inT=M[1],inI=M[2];
+ var y=[],i,j,k;
+ for(i=0;i<nA;i++){y.push([]);for(j=0;j<nB;j++){
+  if(mode==='real'){y[i].push(REAL[i][j].slice());continue}
+  var m=GM+pe*(1-i)+te*V[j]+ti*U[i]*W[j],s=het?sd*Math.max(m,0.4)/GM:sd;
+  y[i].push(Z[i][j].map(function(z){return Math.max(0.3,m+s*z)}));}}
+ var cm=[],Am=[],Bm=[],G=0,SSE=0,csd=[];
+ for(i=0;i<nA;i++){cm.push([]);for(j=0;j<nB;j++){var mm=y[i][j].reduce(function(a,b){return a+b},0)/n;cm[i].push(mm);G+=mm;
+  var ss=0;y[i][j].forEach(function(v){ss+=(v-mm)*(v-mm)});SSE+=ss;csd.push(Math.sqrt(ss/(n-1)))}}
+ G/=nA*nB;
+ for(i=0;i<nA;i++)Am.push(cm[i].reduce(function(a,b){return a+b},0)/nB);
+ for(j=0;j<nB;j++){var t=0;for(i=0;i<nA;i++)t+=cm[i][j];Bm.push(t/nA)}
+ var SSA=Am.reduce(function(s,a){return s+n*nB*(a-G)*(a-G)},0),SSB=Bm.reduce(function(s,b){return s+n*nA*(b-G)*(b-G)},0),SSAB=0,gm=[],gmax=1e-12;
+ for(i=0;i<nA;i++){gm.push([]);for(j=0;j<nB;j++){var r=cm[i][j]-Am[i]-Bm[j]+G;gm[i].push(r);SSAB+=n*r*r;gmax=Math.max(gmax,Math.abs(r))}}
+ var N=nA*nB*n,SS=[SSA,SSB,SSAB,SSE],df=[nA-1,nB-1,(nA-1)*(nB-1),N-nA*nB],inc=[inP,inT,inI];
+ var resSS=SSE,resDf=df[3],omit=[],omSS=0;
+ for(var q=0;q<3;q++)if(!inc[q]){resSS+=SS[q];resDf+=df[q];omSS+=SS[q];omit.push(q)}
+ var MSr=resSS/resDf,sig=Math.sqrt(MSr),Tt=SSA+SSB+SSAB+SSE;
+ var fit=[];for(i=0;i<nA;i++){fit.push([]);for(j=0;j<nB;j++)fit[i].push(G+(inP?Am[i]-G:0)+(inT?Bm[j]-G:0)+(inI?gm[i][j]:0))}
+ var npar=1+(inP?2:0)+(inT?3:0)+(inI?6:0),lev=npar/N;
+
+ var ds=[],lo=1e9,hi=-1e9;
+ for(j=0;j<nB;j++){
+  if(showFit)ds.push({type:'scatter',data:fit.map(function(row,q){return{x:q,y:row[j]}}),showLine:true,borderColor:cols[j],borderDash:dash[j],backgroundColor:cols[j],borderWidth:2.5,pointStyle:sty[j],pointRadius:5,pointBorderColor:bgc,pointBorderWidth:1.5});
+  if(showMeans)ds.push({type:'scatter',data:cm.map(function(row,q){return{x:q,y:row[j]}}),showLine:false,backgroundColor:'transparent',borderColor:cols[j],borderWidth:2,pointStyle:sty[j],pointRadius:9});
+  var pts=[];for(i=0;i<nA;i++)for(k=0;k<n;k++){var yy=y[i][j][k];lo=Math.min(lo,yy);hi=Math.max(hi,yy);pts.push({x:i+off[j]+JIT[i][j][k],y:yy})}
+  ds.push({type:'scatter',data:pts,backgroundColor:cols[j]+(showFit||showMeans?'66':'dd'),borderColor:'transparent',pointStyle:sty[j],pointRadius:showFit||showMeans?3.5:5});
+ }
+ var pad=(hi-lo)*0.08;ch.options.scales.y.min=lo-pad;ch.options.scales.y.max=hi+pad;
+ ch.data.datasets=ds;ch.update('none');
+ $('mode').textContent=(mode==='real'?'Data: the classic Box and Cox poison data (4 animals per cell). ':'Data: simulated with poison effect '+pe.toFixed(1)+', treatment effect '+te.toFixed(1)+', interaction '+ti.toFixed(1)+'. ')+'Fitted model: '+$('models').querySelector('.on').textContent.toLowerCase()+'.';
+
+ var seg=[SSA,SSB,SSAB,SSE];
+ $('bar').innerHTML=seg.map(function(s,q){var om=q<3&&!inc[q];return '<div style="width:'+(100*s/Tt)+'%;background:'+comps[q][1]+';opacity:'+(om?0.4:1)+'"></div>'}).join('');
+ $('barlg').innerHTML=seg.map(function(s,q){var om=q<3&&!inc[q];return '<span style="opacity:'+(om?0.7:1)+'"><i style="background:'+comps[q][1]+';opacity:'+(om?0.4:1)+'"></i>'+comps[q][0]+(om?' (omitted)':'')+' '+Math.round(100*s/Tt)+'%</span>'}).join('');
+
+ var nm=['Poison','Treatment','Poison \u00d7 treatment'],rows='',terms=[];
+ for(q=0;q<3;q++)if(inc[q]){var ms=SS[q]/df[q],F=ms/MSr,p=pF(F,df[q],resDf);terms.push(p);rows+='<tr><td>'+nm[q]+'</td><td>'+f(SS[q])+'</td></tr>'}
+ rows+='<tr><td>Residual'+(omit.length?' (includes omitted terms)':'')+'</td><td>'+f(resSS)+'</td></tr><tr><td style="font-weight:500;color:var(--text)">Total</td><td style="font-weight:500">'+f(Tt)+'</td></tr>';
+ $('tb').innerHTML=rows;
+ var nsig=0;terms.forEach(function(p){if(p<0.05)nsig++});
+ var msg;
+ if(!terms.length)msg='This model has no terms: every animal is predicted by the overall mean, so all the variability is residual.';
+ else msg='The model accounts for '+Math.round(100*(Tt-resSS)/Tt)+'% of the total sum of squares.'+(omit.length?' The omitted terms are counted in the residual, so the residual grows.':'');
+ $('msg').textContent=msg;
+
+ $('fx').innerHTML='y<sub>ijk</sub> = μ'+(inP?' + α<sub>i</sub>':'')+(inT?' + β<sub>j</sub>':'')+(inI?' + (αβ)<sub>ij</sub>':'')+' + ε<sub>ijk</sub>, &nbsp; ε<sub>ijk</sub> ~ N(0, σ²)';
+ var h='<tr><th></th>'+T.map(function(t){return '<th>'+t+'</th>'}).join('')+'<th>\u03b1\u0302<sub>i</sub></th></tr>';
+ for(i=0;i<nA;i++){h+='<tr><td>Poison '+P[i]+'</td>';
+  for(j=0;j<nB;j++){if(inI){var a=0.45*Math.abs(gm[i][j])/gmax,c=gm[i][j]>=0?'42,120,214':'235,104,52';h+='<td style="background:rgba('+c+','+a.toFixed(2)+')">'+sg(gm[i][j])+'</td>'}else h+='<td style="color:var(--muted)">\u2013</td>'}
+  h+='<td'+(inP?'':' style="color:var(--muted)"')+'>'+(inP?sg(Am[i]-G):'\u2013')+'</td></tr>'}
+ h+='<tr><td>\u03b2\u0302<sub>j</sub></td>'+Bm.map(function(b){return '<td'+(inT?'':' style="color:var(--muted)"')+'>'+(inT?sg(b-G):'\u2013')+'</td>'}).join('')+'<td>\u03bc\u0302 = '+f(G)+'</td></tr>';
+ $('et').innerHTML=h;
+ $('sg').innerHTML='\u03c3\u0302 = \u221a(residual MS) = '+f(sig)+' on '+resDf+' degrees of freedom';
+ var ei=+$('exP').value,ej=+$('exT').value,al=inP?Am[ei]-G:0,be=inT?Bm[ej]-G:0,ga=inI?gm[ei][ej]:0,gap=cm[ei][ej]-fit[ei][ej];
+ $('ex').innerHTML='Poison '+P[ei]+', treatment '+T[ej]+': fitted value = \u03bc\u0302'+(inP?' + \u03b1\u0302':'')+(inT?' + \u03b2\u0302':'')+(inI?' + (\u03b1\u03b2)\u0302':'')+' = '+f(G)+(inP?' '+sg(al):'')+(inT?' '+sg(be):'')+(inI?' '+sg(ga):'')+' = '+f(fit[ei][ej])+'. The observed cell mean is '+f(cm[ei][ej])+', so the model misses '+f(Math.abs(gap))+(Math.abs(gap)<0.0005?' (nothing)':(gap>0?' (it under-predicts this cell)':' (it over-predicts this cell)'))+'.';
+
+ var rd=[],rgd=[],all=[],xs=[],mx=0,ringR=[];
+ for(j=0;j<nB;j++){var pr=[],pg=[],rg2=[];
+  for(i=0;i<nA;i++){for(k=0;k<n;k++){var e=y[i][j][k]-fit[i][j];pr.push({x:fit[i][j],y:e});pg.push({x:i+off[j]+JIT[i][j][k],y:e});all.push(e/(sig*Math.sqrt(1-lev)));xs.push(fit[i][j]);mx=Math.max(mx,Math.abs(e))}
+   rg2.push({x:i+off[j],y:cm[i][j]-fit[i][j]})}
+  rd.push({type:'scatter',data:pr,backgroundColor:cols[j]+'cc',borderColor:'transparent',pointStyle:sty[j],pointRadius:4});
+  rgd.push({type:'scatter',data:pg,backgroundColor:cols[j]+'66',borderColor:'transparent',pointStyle:sty[j],pointRadius:3.5});
+  ringR.push({type:'scatter',data:rg2,backgroundColor:'transparent',borderColor:cols[j],borderWidth:2,pointStyle:sty[j],pointRadius:9})}
+ mx=Math.max(mx,1e-6);
+ var x0=Math.min.apply(null,xs),x1=Math.max.apply(null,xs),xp=(x1-x0)*0.08+0.3;
+ rd.push({type:'scatter',data:[{x:x0-xp,y:0},{x:x1+xp,y:0}],showLine:true,borderColor:'#888780',borderWidth:1,borderDash:[4,3],pointRadius:0});
+ rc.options.scales.x.min=x0-xp;rc.options.scales.x.max=x1+xp;rc.options.scales.y.min=-mx*1.25;rc.options.scales.y.max=mx*1.25;
+ rc.data.datasets=rd;rc.update('none');
+ rgd=ringR.concat(rgd);rgd.push({type:'scatter',data:[{x:-0.5,y:0},{x:2.5,y:0}],showLine:true,borderColor:'#888780',borderWidth:1,borderDash:[4,3],pointRadius:0});
+ rg.options.scales.y.min=-mx*1.25;rg.options.scales.y.max=mx*1.25;rg.data.datasets=rgd;rg.update('none');
+ var so=all.slice().sort(function(a,b){return a-b}),qs=so.map(function(_,q){return qn((q+0.5)/N)}),qp=so.map(function(v,q){return{x:qs[q],y:v}});
+ var mxq=so.reduce(function(a,b){return a+b},0)/N,mq=qs.reduce(function(a,b){return a+b},0)/N,sxy=0,sxx=0,syy=0;
+ for(i=0;i<N;i++){sxy+=(so[i]-mxq)*(qs[i]-mq);sxx+=(so[i]-mxq)*(so[i]-mxq);syy+=(qs[i]-mq)*(qs[i]-mq)}
+ var rq=sxy/Math.sqrt(sxx*syy),lim=Math.max(3,Math.ceil(Math.max(Math.abs(so[0]),Math.abs(so[N-1]))+0.2));
+ qq.options.scales.y.min=-lim;qq.options.scales.y.max=lim;
+ qq.data.datasets=[{type:'scatter',data:qp,backgroundColor:'#2a78d6cc',borderColor:'transparent',pointRadius:3.5},{type:'scatter',data:[{x:-3,y:-3},{x:3,y:3}],showLine:true,borderColor:'#888780',borderWidth:1,borderDash:[4,3],pointRadius:0}];
+ qq.update('none');
+
+ var share=omSS/resSS,names=omit.map(function(q){return q===2?'the poison \u00d7 treatment interaction':q===0?'the poison effect':'the treatment effect'}),d0,d1,d2;
+ if(omit.length&&share>0.1)d0='The model leaves out '+names.join(' and ')+', which accounts for '+Math.round(100*share)+'% of its residual sum of squares. That structure is still in the residuals: the rings in the middle plot sit away from zero in a systematic pattern, and the left plot shows groups of residuals shifted up or down instead of a random band.';
+ else if(omit.length)d0='The model leaves out '+names.join(' and ')+', but they contribute only '+Math.round(100*share)+'% of the residual sum of squares here, so the residuals look almost the same as for the full model. Omitting a term that is not really there costs little.';
+ else d0='The full model reproduces every cell mean, so the rings sit exactly on the zero line and no group-level structure is left in the residuals.';
+ var ratio=Math.max.apply(null,csd)/Math.min.apply(null,csd);
+ d1=ratio>6?' Within-cell spread differs strongly (largest SD is '+ratio.toFixed(1)+' times the smallest), so equal variance is doubtful.':ratio>3?' Within-cell spread differs noticeably (largest SD is '+ratio.toFixed(1)+' times the smallest).':' Within-cell spread is similar (largest SD is '+ratio.toFixed(1)+' times the smallest).';
+ d2=rq<0.97?' The Q-Q points bend away from the line (correlation '+rq.toFixed(3)+'), so the residuals look non-normal.':' The Q-Q points follow the line (correlation '+rq.toFixed(3)+').';
+ $('dmsg').textContent=d0+d1+d2;
+}
+function vis(){$('fm').style.display=$('sf')&&!$('sf').checked?'none':'block';$('dg').style.display=$('sd2')&&!$('sd2').checked?'none':'block';[rc,rg,qq].forEach(function(c){c.resize()})}
+function theme(){tc=css('--muted')||tc;bgc=css('--bg')||bgc;
+ [ch,rc,rg,qq].forEach(function(c){c.options.scales.x.ticks.color=tc;c.options.scales.y.ticks.color=tc;c.options.scales.x.title.color=tc;c.options.scales.y.title.color=tc});
+ run()}
+['sa','sb','si','sn'].forEach(function(id){$(id).addEventListener('input',function(){mode='sim';run()})});
+$('het').addEventListener('change',function(){mode='sim';run()});
+$('cl').addEventListener('change',run);$('cmn').addEventListener('change',run);
+$('sf').addEventListener('change',vis);$('sd2').addEventListener('change',vis);
+$('exP').addEventListener('change',run);$('exT').addEventListener('change',run);
+document.querySelectorAll('#presets button').forEach(function(b){b.addEventListener('click',function(){
+ if(b.dataset.p==='real'){mode='real'}else{mode='sim';var p=b.dataset.p.split(',');['sa','sb','si','sn'].forEach(function(id,q){$(id).value=p[q]})}
+ run()})});
+document.querySelectorAll('#models button').forEach(function(b){b.addEventListener('click',function(){
+ model=b.dataset.m;document.querySelectorAll('#models button').forEach(function(x){x.className=x===b?'on':''});run()})});
+try{window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',theme)}catch(e){}
+run();
+</script>
+</body>
+</html>
